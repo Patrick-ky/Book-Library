@@ -10,32 +10,30 @@
 
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
-<style>
-
-</style>
+</head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbar"> <span class="navbar-toggler-icon"></span>
-    </button>
-
-      <div class="navbar-nav">
-            <div class="navbar-header">
-              <a href="homepage" class="navbar-brand">
+      <nav class="navbar-nav">
+            <nav class="navbar-header">
+              <a class="navbar-brand" href="/">
                 Book Distribution of Holy Trinity College of General Santos City</a>
-              </div>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-            <div class = "navbar-nav">    
-              <a class =  "nav-item nav-link" id="Index" href="/index">Home</a>
-              <a class =  "nav-item nav-link" id="students" href="/students">Students</a>
-              <a class =  "nav-item nav-link" id="books" href="books">Books</a>
+             
+              <nav class="collapse navbar-collapse" id="navbar">
+              <div class = "navbar-nav">    
+              <a class =  "nav-item nav-link" id= "index" href="/index"> Home </a>
+              <a class =  "nav-item nav-link" id= "students" href="/students"> Students </a>
+              <a class =  "nav-item nav-link" id= "books" href="books"> Books </a>
               <a class =  "nav-item nav-link" id= "about" target = "blank" href = "https://htcgsc.edu.ph/"> About</a>
-                
-               </div>
+               </nav>
+              </nav>
+            </nav>
+          </nav>
+              
+               <div class="container pt-4">
+                {% block body %}
+                {% endblock %}
+              </div>
+              
 <script>
    const btnDelete= document.querySelectorAll('.btn-delete');
       if(btnDelete) {
@@ -48,10 +46,6 @@
                     });
                   })
                 }
-
-  <div class="container pt-4">
-    {% block body %}
-    {% endblock %}
-    </div>
-  </body>
+              </script>
+</body>
 </html>
